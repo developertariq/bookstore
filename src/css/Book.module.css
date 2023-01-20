@@ -1,0 +1,6 @@
+.item {
+  display: flex;
+  list-style-type: none;
+  padding-bottom: 48px;
+  background-color: #fff;
+}
