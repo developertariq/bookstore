@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.css';
 import App from './App';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
 import Header from './components/Header';
+import './css/index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
