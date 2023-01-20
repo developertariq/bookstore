@@ -1,0 +1,13 @@
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1efef;
+  padding: 50px 48px 100px;
+  gap: 20px;
+}
+
+.menuNav {
+  display: flex;
+  list-style: none;
+}

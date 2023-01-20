@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 50px;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -14,14 +15,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+  background-color: rgb(248, 248, 255);
 }
