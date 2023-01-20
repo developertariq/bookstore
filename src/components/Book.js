@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReadingProgress from './ReadingProgress';
 import ReadingStatus from './ReadingStatus';
-import '../css/Book.module.css';
+import styles from '../css/Book.module.css';
 
 const Book = (props) => {
   const { book } = props;
@@ -11,13 +11,13 @@ const Book = (props) => {
   } = book;
 
   return (
-    <li className="item">
-      <div className="item">
+    <li className={styles.item}>
+      <div className={styles.book}>
         <div>
           <h4>{category}</h4>
           <h2>{title}</h2>
           <p>{author}</p>
-          <ul>
+          <ul className="menuNav">
             <li>Comments</li>
             <li>Remove</li>
             <li>Edit</li>
