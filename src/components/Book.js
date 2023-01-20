@@ -17,11 +17,7 @@ const Book = (props) => {
           <h4>{category}</h4>
           <h2>{title}</h2>
           <p>{author}</p>
-          <ul className="menuNav">
-            <li>Comments</li>
-            <li>Remove</li>
-            <li>Edit</li>
-          </ul>
+          <button type="button">Remove</button>
         </div>
         <div>
           <ReadingProgress id={id} />
