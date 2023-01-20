@@ -8,7 +8,7 @@ const SiteTitle = () => (
       fontWeight: '600',
       marginBottom: '2rem',
       lineHeight: '1em',
-      color: '#3c6c8c',
+      color: 'orangered',
       textAlign: 'center',
     }}
   >
