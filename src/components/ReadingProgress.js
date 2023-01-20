@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { MdDataUsage } from 'react-icons/md';
 
 const ReadingProgress = (props) => {
   const { id } = props;
   return (
     <div>
-      <button type="button">Progress%</button>
-      <p>Current Chapter</p>
-      <p>{id}</p>
+      <button type="button">
+        <MdDataUsage />
+      </button>
+      <p>
+        {id}
+        75%
+      </p>
+      <p>Completed</p>
     </div>
   );
 };

@@ -6,7 +6,10 @@ const ReadingStatus = (props) => {
   return (
     <div>
       <p>Current Chapter</p>
-      <p>{id}</p>
+      <p>
+        Third Chapter
+        {id}
+      </p>
       <button type="button">Update Progress</button>
     </div>
   );
