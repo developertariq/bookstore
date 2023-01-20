@@ -6,3 +6,8 @@
   padding: 50px 48px 100px;
   gap: 20px;
 }
+
+.menuNav {
+  display: flex;
+  list-style: none;
+}

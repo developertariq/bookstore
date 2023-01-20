@@ -1,6 +1,23 @@
 .item {
-  display: flex;
   list-style-type: none;
+  margin: 0 0 48px -40px;
+  background-color: #fff;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   padding-bottom: 48px;
   background-color: #fff;
+}
+
+.incomplete_circle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
 }
