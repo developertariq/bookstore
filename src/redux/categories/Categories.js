@@ -1,9 +1,9 @@
 import React from 'react';
 
-const STATUS = 'STATUS';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-export function createWidget(category) {
-  return { type: STATUS, category };
+export function checkStatus(category) {
+  return { type: CHECK_STATUS, category };
 }
 
 const initialState = {
@@ -12,7 +12,7 @@ const initialState = {
 
 export default function categories(state = initialState, action) {
   switch (action.type) {
-    case STATUS:
+    case CHECK_STATUS:
       return { ...state, categories: action.categories };
     default:
       return state;

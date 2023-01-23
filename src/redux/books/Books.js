@@ -3,15 +3,15 @@ import { v4 as uuidv4 } from 'uuid';
 import BookList from '../../components/BookList';
 import AddBook from '../../components/AddBook';
 
-const ADD = 'ADD';
-const REMOVE = 'REMOVE';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-export function createWidget(book) {
-  return { type: ADD, book };
+export function addBook(book) {
+  return { type: ADD_BOOK, book };
 }
 
-export function removeWidget(book) {
-  return { type: REMOVE, book };
+export function removeBook(book) {
+  return { type: REMOVE_BOOK, book };
 }
 
 const initialState = {
@@ -20,9 +20,9 @@ const initialState = {
 
 export default function books(state = initialState, action) {
   switch (action.type) {
-    case ADD:
+    case ADD_BOOK:
       return { ...state, books: action.books };
-    case REMOVE:
+    case REMOVE_BOOK:
       return { ...state, books: action.books };
     default:
       return state;
