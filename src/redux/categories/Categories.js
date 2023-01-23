@@ -8,12 +8,13 @@ export function checkStatus(category) {
 
 const initialState = {
   categories: [],
+  status: '',
 };
 
 export default function categories(state = initialState, action) {
   switch (action.type) {
     case CHECK_STATUS:
-      return { ...state, categories: action.categories };
+      return { ...state, categories: action.categories, status: 'Under construction' };
     default:
       return state;
   }
