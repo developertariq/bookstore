@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import BookList from '../components/BookList';
-import AddBook from '../components/AddBook';
+import BookList from '../../components/BookList';
+import AddBook from '../../components/AddBook';
 
 const Books = () => {
   const initState = [

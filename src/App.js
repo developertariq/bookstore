@@ -1,5 +1,5 @@
 import React from 'react';
-import Books from './pages/Books';
+import Books from './redux/books/Books';
 import './css/App.css';
 
 class App extends React.Component {
