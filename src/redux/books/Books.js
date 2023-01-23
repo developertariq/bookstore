@@ -3,7 +3,33 @@ import { v4 as uuidv4 } from 'uuid';
 import BookList from '../../components/BookList';
 import AddBook from '../../components/AddBook';
 
-const Books = () => {
+const ADD = 'ADD';
+const REMOVE = 'REMOVE';
+
+export function createWidget(book) {
+  return { type: ADD, book };
+}
+
+export function removeWidget(book) {
+  return { type: REMOVE, book };
+}
+
+const initialState = {
+  books: [],
+};
+
+export default function books(state = initialState, action) {
+  switch (action.type) {
+    case ADD:
+      return { ...state, books: action.books };
+    case REMOVE:
+      return { ...state, books: action.books };
+    default:
+      return state;
+  }
+}
+
+export const Books = () => {
   const initState = [
     {
       id: 1,
@@ -41,5 +67,3 @@ const Books = () => {
     </div>
   );
 };
-
-export default Books;
