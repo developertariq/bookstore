@@ -1,23 +1,26 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReadingProgress from './ReadingProgress';
 import ReadingStatus from './ReadingStatus';
 import styles from '../css/Book.module.css';
+import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
-  const { book, removeBookProps } = props;
+  const dispatch = useDispatch();
+
+  const { book } = props;
   const {
-    id, title, author, category,
+    id, title, author,
   } = book;
 
   return (
     <li className={styles.item}>
       <div className={styles.book}>
         <div>
-          <h4>{category}</h4>
           <h2>{title}</h2>
           <p>{author}</p>
-          <button type="button" onClick={() => removeBookProps(id)}>Remove</button>
+          <button type="button" onClick={() => { dispatch(removeBook(id)); }}>Remove</button>
         </div>
         <div>
           <ReadingProgress id={id} />
@@ -31,13 +34,11 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  removeBookProps: PropTypes.func.isRequired,
   book: PropTypes.objectOf(
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
       author: PropTypes.string,
-      category: PropTypes.string,
     }),
   ),
 };

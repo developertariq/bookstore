@@ -5,8 +5,8 @@ export function addBook(book) {
   return { type: ADD_BOOK, book };
 }
 
-export function removeBook(book) {
-  return { type: REMOVE_BOOK, book };
+export function removeBook(id) {
+  return { type: REMOVE_BOOK, id };
 }
 
 export const initialData = [
@@ -32,8 +32,7 @@ export default function bookReducer(state = initialData, action) {
     case ADD_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:
-      return state;
-      // return { ...state, books: state.books.filter((book) => book !== action.book) };
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }
