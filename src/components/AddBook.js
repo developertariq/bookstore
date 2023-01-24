@@ -1,29 +1,19 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
+import { addBook } from '../redux/books/books';
 
-const AddBook = (props) => {
-  const [inputText, setInputText] = useState({
-    title: '',
-    author: '',
-  });
-
-  const handleChange = (e) => {
-    setInputText({
-      ...inputText,
-      [e.target.name]: e.target.value,
-      [e.target.name]: e.target.value,
-    });
-  };
+const AddBook = ({ dispatch }) => {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { addNewBookProps } = props;
-    if (inputText.title.trim() && inputText.author.trim()) {
-      addNewBookProps(inputText.title, inputText.author);
-      setInputText({
-        title: '',
-        author: '',
-      });
+    if (title.trim() && author.trim()) {
+      dispatch(addBook({ id: uuidv4(), title, author }));
+      setTitle('');
+      setAuthor('');
     } else {
       // eslint-disable-next-line
       alert('Please write book title and author name!');
@@ -31,7 +21,7 @@ const AddBook = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
+    <form className="form-container" onSubmit={handleSubmit}>
       <h2>
         Add New Book
       </h2>
@@ -39,17 +29,15 @@ const AddBook = (props) => {
         type="text"
         className="input-text"
         placeholder="Book title"
-        value={inputText.title}
-        name="title"
-        onChange={handleChange}
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
       <input
         type="text"
         className="input-text"
         placeholder="Author"
-        value={inputText.author}
-        name="author"
-        onChange={handleChange}
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
       />
       <button type="submit" className="input-submit">
         Add Book
@@ -59,7 +47,7 @@ const AddBook = (props) => {
 };
 
 AddBook.propTypes = {
-  addNewBookProps: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
-export default AddBook;
+export default connect()(AddBook);
