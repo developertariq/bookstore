@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import PropTypes from 'prop-types';
 import { addBook } from '../redux/books/books';
 
-const AddBook = ({ dispatch }) => {
+const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-
+  const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
@@ -44,10 +43,6 @@ const AddBook = ({ dispatch }) => {
       </button>
     </form>
   );
-};
-
-AddBook.propTypes = {
-  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect()(AddBook);
