@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 export function checkStatus(category) {
@@ -11,7 +9,7 @@ const initialState = {
   status: '',
 };
 
-export default function categories(state = initialState, action) {
+export default function categoryReducer(state = initialState, action) {
   switch (action.type) {
     case CHECK_STATUS:
       return { ...state, categories: action.categories, status: 'Under construction' };
@@ -19,18 +17,3 @@ export default function categories(state = initialState, action) {
       return state;
   }
 }
-
-export const Categories = () => {
-  const [status, setStatus] = useState('');
-
-  const updateStatus = () => {
-    setStatus(['Under Construction']);
-  };
-
-  return (
-    <div className="container">
-      <h2>{status}</h2>
-      <button type="button" onClick={updateStatus}>Check status</button>
-    </div>
-  );
-};
