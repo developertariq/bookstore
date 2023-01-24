@@ -1,10 +1,9 @@
 import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import rootReducer from './redux';
+import rootReducer from './redux/configureStore';
 import App from './App';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
