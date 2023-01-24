@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
@@ -20,8 +20,17 @@ export default function categories(state = initialState, action) {
   }
 }
 
-export const Categories = () => (
-  <div className="container">
-    <button type="button">Check status</button>
-  </div>
-);
+export const Categories = () => {
+  const [status, setStatus] = useState('');
+
+  const updateStatus = () => {
+    setStatus(['Under Construction']);
+  };
+
+  return (
+    <div className="container">
+      <h2>{status}</h2>
+      <button type="button" onClick={updateStatus}>Check status</button>
+    </div>
+  );
+};
