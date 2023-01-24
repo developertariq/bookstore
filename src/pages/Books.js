@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import BookList from '../components/BookList';
 import AddBook from '../components/AddBook';
 
 const Books = () => {
-  const initState = [];
+  const [setBooks] = useState([]);
 
-  const [books, setBooks] = useState(initState);
+  const books = useSelector((state) => state.books);
   const removeBook = (id) => {
     setBooks([
       ...books.filter((book) => book.id !== id),

@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux';
-import bookReducer from './books/books';
+import bookReducer, { initialData } from './books/books';
 import categoryReducer from './categories/categories';
 
 const rootReducer = combineReducers({
@@ -8,5 +8,5 @@ const rootReducer = combineReducers({
 });
 
 export default createStore(
-  (state, action) => rootReducer(state, action),
+  (state, action) => rootReducer(state, action), initialData,
 );

@@ -9,26 +9,29 @@ export function removeBook(book) {
   return { type: REMOVE_BOOK, book };
 }
 
-export const initialState = {
+export const initialData = {
   books: [
     {
       id: 1,
-      title: '',
-      author: '',
+      title: 'Mrityukhudha',
+      author: 'Kazi Nazrul Islam',
     },
     {
       id: 2,
-      title: '',
-      author: '',
+      title: 'Harry Potter',
+      author: 'J. K. Rowling',
     },
     {
       id: 3,
-      title: '',
-      author: '',
+      title: 'The Lord of the Rings',
+      author: 'J. R. R. Tolkien',
     },
   ],
 };
 
+const initialState = {
+  books: [],
+};
 export default function bookReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
