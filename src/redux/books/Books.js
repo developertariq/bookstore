@@ -23,46 +23,36 @@ export default function books(state = initialState, action) {
     case ADD_BOOK:
       return { ...state, books: action.books };
     case REMOVE_BOOK:
-      return { ...state, books: action.books };
+      return { ...state, books: state.books.filter((book) => book !== action.book) };
     default:
       return state;
   }
 }
 
 export const Books = () => {
-  const initState = [
-    {
-      id: 1,
-      title: 'Romeo & Juliet',
-      author: 'Shakespear',
-      category: 'Fiction',
-    },
-    {
-      id: 1,
-      title: 'Romeo & Juliet',
-      author: 'Shakespear',
-      category: 'Fiction',
-    },
-    {
-      id: 1,
-      title: 'Romeo & Juliet',
-      author: 'Shakespear',
-      category: 'Fiction',
-    },
-  ];
+  const initState = [];
 
   const [books, setBooks] = useState(initState);
-  const addNewBook = (title, category) => {
+  const removeBook = (id) => {
+    setBooks([
+      ...books.filter((book) => book.id !== id),
+    ]);
+  };
+
+  const addNewBook = (title, author) => {
     const newBook = {
       id: uuidv4(),
       title,
-      category,
+      author,
     };
     setBooks([...books, newBook]);
   };
   return (
     <div className="container">
-      <BookList books={books} />
+      <BookList
+        books={books}
+        removeBookProps={removeBook}
+      />
       <AddBook addNewBookProps={addNewBook} />
     </div>
   );
