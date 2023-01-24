@@ -173,7 +173,8 @@ You can deploy this project using:
 Example:
 
 ```sh
-
+npm install react-redux @reduxjs/toolkit
+npm i -S redux
 ```
  -->
 

@@ -5,7 +5,7 @@ import ReadingStatus from './ReadingStatus';
 import styles from '../css/Book.module.css';
 
 const Book = (props) => {
-  const { book } = props;
+  const { book, removeBookProps } = props;
   const {
     id, title, author, category,
   } = book;
@@ -17,7 +17,7 @@ const Book = (props) => {
           <h4>{category}</h4>
           <h2>{title}</h2>
           <p>{author}</p>
-          <button type="button">Remove</button>
+          <button type="button" onClick={() => removeBookProps(id)}>Remove</button>
         </div>
         <div>
           <ReadingProgress id={id} />
@@ -31,6 +31,7 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
+  removeBookProps: PropTypes.func.isRequired,
   book: PropTypes.objectOf(
     PropTypes.shape({
       id: PropTypes.string,

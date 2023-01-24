@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import Book from './Book';
 
 const BookList = (props) => {
-  const { books } = props;
+  const { books, removeBookProps } = props;
   return (
     <ul>
       {books.map((book) => (
         <Book
           key={book.id}
           book={book}
+          removeBookProps={removeBookProps}
         />
       ))}
     </ul>
@@ -17,6 +18,7 @@ const BookList = (props) => {
 };
 
 BookList.propTypes = {
+  removeBookProps: PropTypes.func.isRequired,
   books: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
