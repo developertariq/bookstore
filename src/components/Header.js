@@ -10,6 +10,7 @@ const Header = () => {
     alignItems: 'center',
     backgroundColor: '#fff',
     padding: '10px 48px',
+    boxShadow: '0 0 3px 0 #aaa9a9bf',
   };
 
   return (

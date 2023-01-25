@@ -5,7 +5,7 @@ const SiteTitle = () => (
     data-testid="site-title"
     style={{
       fontSize: '2rem',
-      fontWeight: '600',
+      fontWeight: '900',
       marginBottom: '2rem',
       lineHeight: '1em',
       color: 'orangered',

@@ -5,9 +5,26 @@
   background-color: #f1efef;
   padding: 50px 48px 100px;
   gap: 20px;
+  box-shadow: 0 0 3px 0 #aaa9a9bf;
 }
 
 .menuNav {
   display: flex;
   list-style: none;
+}
+
+.navBar {
+  position: relative;
+  flex: 1;
+}
+
+.navBar a {
+  display: block;
+  padding: 8px 8px;
+  text-decoration: none;
+  color: #043d07;
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
 }
