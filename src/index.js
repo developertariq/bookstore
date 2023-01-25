@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStore } from 'redux';
+import { createStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
