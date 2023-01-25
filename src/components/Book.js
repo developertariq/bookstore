@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ReadingProgress from './ReadingProgress';
 import ReadingStatus from './ReadingStatus';
 import styles from '../css/Book.module.css';
-import { removeBook } from '../redux/books/books';
+import { removeBook } from '../redux/book/books';
 
 const Book = (props) => {
   const dispatch = useDispatch();

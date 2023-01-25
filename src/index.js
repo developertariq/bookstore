@@ -8,7 +8,7 @@ import App from './App';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
 import Header from './components/Header';
-import { initialData } from './redux/books/books';
+import { initialData } from './redux/book/books';
 import './css/index.css';
 
 const store = createStore(
