@@ -7,6 +7,13 @@ import AddBook from '../components/AddBook';
 const Books = () => {
   const dispatch = useDispatch();
   const { data, status, error } = useSelector((state) => state.api);
+  const books = [];
+
+  Object.entries(data).forEach(([key, value]) => {
+    const book = value[0];
+    const id = { id: key };
+    books.push({ ...book, ...id });
+  });
 
   useEffect(() => {
     dispatch(fetchBooks());
@@ -27,7 +34,7 @@ const Books = () => {
 
   return (
     <div className="container">
-      <BookList books={Array.from(data)} />
+      <BookList books={books} />
       <AddBook />
     </div>
   );
