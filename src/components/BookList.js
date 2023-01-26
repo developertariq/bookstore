@@ -6,7 +6,7 @@ const BookList = (props) => {
   const { books, removeBookProps } = props;
 
   return (
-    <ul>
+    <ul style={{ paddingBottom: '8px' }}>
       {books.map((book) => (
         <Book
           key={book.id}

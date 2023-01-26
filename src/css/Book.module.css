@@ -1,23 +1,39 @@
 .item {
   list-style-type: none;
-  margin: 0 0 48px -40px;
+  margin: 0 0 16px -40px;
   background-color: #fff;
+  box-shadow: 0 0 2px 0 #b3b1b1bf;
 }
 
-.book {
+.bookContainer {
   display: flex;
   justify-content: space-between;
-  padding: 48px;
+  align-items: flex-end;
+  font-family: monospace, sans-serif;
+  padding: 16px;
   background-color: #fff;
 }
 
-.incomplete_circle {
-  width: 50px;
-  height: 50px;
-  border: 2px solid #333;
-  border-radius: 50%;
-  border-bottom: none;
-  border-left: none;
-  transform: rotate(45deg);
+.bookButton {
+  word-wrap: break-word;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: monospace, sans-serif;
+  margin-top: 10px;
 }
 
+.progressStyle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.readingStyle {
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  margin: 0;
+}

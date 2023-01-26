@@ -8,6 +8,13 @@
   border: 1px solid #e6e3e3bf;
 }
 
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #ee6723;
+}
+
 .menuNav {
   display: flex;
   list-style: none;
@@ -35,12 +42,34 @@
 }
 
 .navBar a:hover {
-  color: #262726f8
+  color: #262726f8;
+}
+
+.user-button {
+  background: #f1f3f4;
+  border: none;
+  cursor: pointer;
+  float: right;
+  outline: none;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  margin: auto auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px 90px;
+  box-shadow: 0 10px 10px 5px #aaa9a9bf;
+  border: 1px solid #e6e3e3bf;
 }
 
 .form-container {
   height: 210px;
-  padding: 16px 0;
+  padding-top: 24px;
   gap: 16px;
   border-top: 1px solid #bbb8bb;
 }
@@ -59,7 +88,7 @@
 }
 
 .input-text {
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 17px;
   line-height: 22px;
   background-color: #fff;
@@ -69,14 +98,23 @@
 }
 
 .container button {
-  font-size: 17px;
-  font-weight: bold;
   text-align: center;
-  line-height: 22px;
   text-transform: uppercase;
   padding: 8px 24pt;
   color: #fff;
   background-color: #419bf9;
-  border: none; 
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  color: #fff;
+  background-color: #ee6723;
+}
+
+.input-submit {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 22px;
 }

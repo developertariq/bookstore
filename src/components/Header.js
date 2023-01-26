@@ -1,26 +1,17 @@
 import React from 'react';
-import SiteTitle from './SiteTitle';
+import { FaUser } from 'react-icons/fa';
 import Navbar from './Navbar';
-import User from './User';
 
-const Header = () => {
-  const headerStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    padding: '4px 90px',
-    boxShadow: '0 10px 10px 5px #aaa9a9bf',
-    border: '1px solid #e6e3e3bf',
-  };
-
-  return (
-    <header data-testid="header" style={headerStyle}>
-      <SiteTitle />
-      <Navbar />
-      <User />
-    </header>
-  );
-};
+const Header = () => (
+  <header data-testid="header">
+    <h1 className="title">
+      Bookstore CMS
+    </h1>
+    <Navbar />
+    <button className="user-button" type="button">
+      <FaUser style={{ color: '#ee6723', fontSize: '20px' }} />
+    </button>
+  </header>
+);
 
 export default Header;
