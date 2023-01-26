@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-family: monospace, sans-serif;
+  font-family: -apple-system, sans-serif;
   padding: 16px;
   background-color: #fff;
 }

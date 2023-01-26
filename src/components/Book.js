@@ -32,7 +32,7 @@ const Book = (props) => {
           <p style={{ color: '#419bf9', margin: '0' }}>{author}</p>
           <button className={styles.bookButton} type="button" onClick={() => { dispatch(removeBooks(id)); }}>Remove</button>
         </div>
-        <div className="progressStyle">
+        <div className={styles.progressStyle}>
           <div style={{ width: 80, height: 80 }}>
             <CircularProgressbar value={percentage} />
           </div>
@@ -49,7 +49,7 @@ const Book = (props) => {
             border: '1px solid #beaabe',
           }}
         />
-        <div className="readingStyle">
+        <div className={styles.readingStyle}>
           <p
             style={{
               color: '#979197',
