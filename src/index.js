@@ -10,6 +10,7 @@ import Books from './pages/Books';
 import Categories from './pages/Categories';
 import Header from './components/Header';
 import './css/index.css';
+import './css/Book.module.css';
 
 const store = createStore(
   (state, action) => rootReducer(state, action), applyMiddleware(thunk),
