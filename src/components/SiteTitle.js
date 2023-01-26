@@ -4,12 +4,10 @@ const SiteTitle = () => (
   <h1
     data-testid="site-title"
     style={{
-      fontSize: '2rem',
-      fontWeight: '900',
-      marginBottom: '2rem',
-      lineHeight: '1em',
-      color: 'orangered',
-      textAlign: 'center',
+      fontSize: '34px',
+      fontWeight: 'bold',
+      lineHeight: '32px',
+      color: '#ee6723',
     }}
   >
     Bookstore CMS

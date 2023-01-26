@@ -12,11 +12,11 @@ const User = () => (
       borderRadius: '100px',
       height: '50px',
       width: '50px',
-      margin: '-10px 0 0 10px',
+      margin: 'auto auto',
     }}
     type="button"
   >
-    <FaUser style={{ color: 'orangered', fontSize: '20px' }} />
+    <FaUser style={{ color: '#ee6723', fontSize: '20px' }} />
   </button>
 );
 

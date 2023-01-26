@@ -3,28 +3,38 @@
   display: flex;
   flex-direction: column;
   background-color: #f1efef;
-  padding: 50px 48px 100px;
-  gap: 20px;
-  box-shadow: 0 0 3px 0 #aaa9a9bf;
+  padding: 30px 90px 100px;
+  box-shadow: 0 10px 10px 5px #b3b1b1bf;
+  border: 1px solid #e6e3e3bf;
 }
 
 .menuNav {
   display: flex;
   list-style: none;
+  gap: 24px;
 }
 
 .navBar {
   position: relative;
   flex: 1;
+  text-align: center;
 }
 
 .navBar a {
   display: block;
+  font-size: 16px;
   padding: 8px 8px;
   text-decoration: none;
-  color: #07eb12f8;
+  color: #979197;
   text-transform: uppercase;
-  font-size: medium;
-  font-weight: bold;
   cursor: pointer;
 }
+
+.navBar a:focus {
+  color: #262726f8;
+}
+
+.navBar a:hover {
+  color: #262726f8
+}
+

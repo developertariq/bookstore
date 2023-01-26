@@ -9,8 +9,9 @@ const Header = () => {
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#fff',
-    padding: '10px 48px',
-    boxShadow: '0 0 3px 0 #aaa9a9bf',
+    padding: '4px 90px',
+    boxShadow: '0 10px 10px 5px #aaa9a9bf',
+    border: '1px solid #e6e3e3bf',
   };
 
   return (
