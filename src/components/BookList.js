@@ -4,6 +4,7 @@ import Book from './Book';
 
 const BookList = (props) => {
   const { books, removeBookProps } = props;
+
   return (
     <ul>
       {books.map((book) => (
@@ -18,7 +19,7 @@ const BookList = (props) => {
 };
 
 BookList.propTypes = {
-  removeBookProps: PropTypes.func.isRequired,
+  removeBookProps: PropTypes.func,
   books: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -29,6 +30,7 @@ BookList.propTypes = {
 };
 
 BookList.defaultProps = {
+  removeBookProps: PropTypes.func,
   books: PropTypes.arrayOf(
     PropTypes.shape({}),
   ),

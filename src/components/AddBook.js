@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/book/books';
+import { addBooks } from '../redux/book/addBooks';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title.trim() && author.trim()) {
-      dispatch(addBook({ id: uuidv4(), title, author }));
+    if (title.trim() && author.trim() && category.trim()) {
+      dispatch(addBooks({
+        item_id: uuidv4(),
+        title,
+        author,
+        category,
+      }));
       setTitle('');
       setAuthor('');
+      setCategory('');
     } else {
       // eslint-disable-next-line
-      alert('Please write book title and author name!');
+      alert('Please write book title and author name and select a category!');
     }
   };
 
@@ -38,6 +46,17 @@ const AddBook = () => {
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
+      <select
+        className="input-text"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="" disabled>Select category</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Novel">Novel</option>
+        <option value="Science-Fiction">Science-Fiction</option>
+        <option value="Economy">Economy</option>
+      </select>
       <button type="submit" className="input-submit">
         Add Book
       </button>
@@ -45,4 +64,4 @@ const AddBook = () => {
   );
 };
 
-export default connect()(AddBook);
+export default AddBook;

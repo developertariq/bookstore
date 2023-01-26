@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStore } from '@reduxjs/toolkit';
+import { createStore, applyMiddleware } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -8,11 +9,10 @@ import App from './App';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
 import Header from './components/Header';
-import { initialData } from './redux/book/books';
 import './css/index.css';
 
 const store = createStore(
-  (state, action) => rootReducer(state, action), initialData,
+  (state, action) => rootReducer(state, action), applyMiddleware(thunk),
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
