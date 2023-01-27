@@ -22,7 +22,6 @@ const AddBook = () => {
       setAuthor('');
       setCategory('');
     } else {
-      // eslint-disable-next-line
       alert('Please write book title and author name and select a category!');
     }
   };
@@ -32,34 +31,39 @@ const AddBook = () => {
       <h2>
         Add New Book
       </h2>
-      <input
-        type="text"
-        className="input-text"
-        placeholder="Book title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        className="input-text"
-        placeholder="Author"
-        value={author}
-        onChange={(e) => setAuthor(e.target.value)}
-      />
-      <select
-        className="input-text"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-      >
-        <option value="" disabled>Select category</option>
-        <option value="Fiction">Fiction</option>
-        <option value="Novel">Novel</option>
-        <option value="Science-Fiction">Science-Fiction</option>
-        <option value="Economy">Economy</option>
-      </select>
-      <button type="submit" className="input-submit">
-        Add Book
-      </button>
+      <div>
+        <input
+          type="text"
+          className="input-text"
+          placeholder="Book title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          style={{ width: '300px' }}
+        />
+        <input
+          type="text"
+          className="input-text"
+          placeholder="Author"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+          style={{ width: '300px' }}
+        />
+        <select
+          className="input-text"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          style={{ width: '165px' }}
+        >
+          <option value="" disabled>Select category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Novel">Novel</option>
+          <option value="Science-Fiction">Science-Fiction</option>
+          <option value="Economy">Economy</option>
+        </select>
+        <button type="submit" className="input-submit">
+          Add Book
+        </button>
+      </div>
     </form>
   );
 };

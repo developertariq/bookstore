@@ -3,28 +3,118 @@
   display: flex;
   flex-direction: column;
   background-color: #f1efef;
-  padding: 50px 48px 100px;
-  gap: 20px;
-  box-shadow: 0 0 3px 0 #aaa9a9bf;
+  padding: 30px 90px 100px;
+  box-shadow: 0 10px 10px 5px #b3b1b1bf;
+  border: 1px solid #e6e3e3bf;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #ee6723;
 }
 
 .menuNav {
   display: flex;
   list-style: none;
+  gap: 24px;
 }
 
 .navBar {
   position: relative;
   flex: 1;
+  text-align: center;
 }
 
 .navBar a {
   display: block;
+  font-size: 16px;
   padding: 8px 8px;
   text-decoration: none;
-  color: #07eb12f8;
+  color: #979197;
   text-transform: uppercase;
-  font-size: medium;
-  font-weight: bold;
   cursor: pointer;
+}
+
+.navBar a:focus {
+  color: #262726f8;
+}
+
+.navBar a:hover {
+  color: #262726f8;
+}
+
+.user-button {
+  background: #f1f3f4;
+  border: none;
+  cursor: pointer;
+  float: right;
+  outline: none;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  margin: auto auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px 90px;
+  box-shadow: 0 10px 10px 5px #aaa9a9bf;
+  border: 1px solid #e6e3e3bf;
+}
+
+.form-container {
+  height: 210px;
+  padding-top: 24px;
+  gap: 16px;
+  border-top: 1px solid #bbb8bb;
+}
+
+.form-container h2 {
+  font-size: 22px;
+  line-height: 28px;
+  color: #979197;
+  text-transform: uppercase;
+}
+
+.form-container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-text {
+  font-family: Poppins, sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  background-color: #fff;
+  border: 1px solid #c9c7c7bf;
+  padding: 9px 10px;
+  border-radius: 4px;
+}
+
+.container button {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 8px 24pt;
+  color: #fff;
+  background-color: #419bf9;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  color: #fff;
+  background-color: #ee6723;
+}
+
+.input-submit {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 22px;
 }

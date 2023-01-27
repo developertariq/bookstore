@@ -1,37 +1,9 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
+<div align="center" >  
+  <h1>Bookstore CMS</h1>
+  </br>
+  </br>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -82,9 +54,9 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-- **Working with React form and handling event.**
-- **Getting started with React lifecycle methods.**
-- **Getting started with React hooks.**
+- **Display a list of books.**
+- **Add a book.**
+- **Remove a selected book.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,6 +147,8 @@ Example:
 ```sh
 npm install react-redux @reduxjs/toolkit
 npm i -S redux
+npm i react-circular-progressbar
+
 ```
  -->
 
@@ -196,9 +170,7 @@ npm i -S redux
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Routing with React Router.**
-- **How to add hamburger menu in React.**
-- **Deploying React app to GitHub Pages.**
+- **Add, edit and display category**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
