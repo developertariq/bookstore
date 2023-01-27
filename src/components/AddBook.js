@@ -22,7 +22,6 @@ const AddBook = () => {
       setAuthor('');
       setCategory('');
     } else {
-      // eslint-disable-next-line
       alert('Please write book title and author name and select a category!');
     }
   };
