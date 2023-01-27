@@ -54,9 +54,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Working with React form and handling event.**
-- **Getting started with React lifecycle methods.**
-- **Getting started with React hooks.**
+- **Display a list of books.**
+- **Add a book.**
+- **Remove a selected book.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,9 +170,7 @@ npm i react-circular-progressbar
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Routing with React Router.**
-- **How to add hamburger menu in React.**
-- **Deploying React app to GitHub Pages.**
+- **Add, edit and display category**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
